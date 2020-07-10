@@ -14,11 +14,11 @@ provider "aws" {
 
 # Create EC2 instance
 #resource "aws_instance" "default" {
-resource "aws_instance" "vpc-west1" {
+resource "aws_instance" "VPC-West" {
   ami                    = var.ami
   count                  = var.instance_count
   key_name               = var.key_name
-  vpc_security_group_ids = [aws_security_group.vpc-west1.id]
+  vpc_security_group_ids = [aws_security_group.VPC-West.id]
   source_dest_check      = false
   instance_type          = var.instance_type
 
@@ -28,7 +28,7 @@ resource "aws_instance" "vpc-west1" {
 }
 
 # Create Security Group for EC2
-resource "aws_security_group" "vpc-west1" {
+resource "aws_security_group" "VPC-West" {
   name = "terraform-default-sg"
 
   ingress {
