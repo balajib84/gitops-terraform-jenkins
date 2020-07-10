@@ -13,7 +13,8 @@ provider "aws" {
 }
 
 # Create EC2 instance
-resource "aws_instance" "default" {
+#resource "aws_instance" "default" {
+resource "aws_instance" "vpc-02ad1137f69efbcc7" {
   ami                    = var.ami
   count                  = var.instance_count
   key_name               = var.key_name
