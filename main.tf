@@ -27,7 +27,7 @@ resource "aws_instance" "default" {
 }
 
 # Create Security Group for EC2
-resource "aws_security_group" "VPC West" {
+resource "aws_security_group" "vpc-02ad1137f69efbcc7" {
   name = "terraform-default-sg"
 
   ingress {
